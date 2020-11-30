@@ -1313,6 +1313,9 @@ ifneq ($(wildcard device/aicp/sepolicy/common/sepolicy.mk),)
 ## last, to avoid accidental resetting by device configs
 $(eval include device/aicp/sepolicy/common/sepolicy.mk)
 endif
+ifneq ($(wildcard device/aicp/sepolicy/sepolicy.mk),)
+$(eval include device/aicp/sepolicy/sepolicy.mk)
+endif
 endif
 
 # EMMA_INSTRUMENT is set to true when coverage is enabled. Creates a suffix to
